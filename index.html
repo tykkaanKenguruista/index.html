@@ -4,16 +4,46 @@
   <meta charset="UTF-8">
   <title>Hello World</title>
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    #sticky-nav {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 18px;
+      z-index: 1000; /* Varmistaa, että navigaatio on päällä muiden elementtien päällä */
+    }
+    
+    #sticky-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    #sticky-nav a:hover {
+      background-color: #555;
+    }
+
     #clock {
       font-size: 24px;
       font-weight: bold;
       margin-top: 20px;
+      text-align: center;
     }
+
     #map {
       height: 400px;
       width: 100%;
       margin-top: 20px;
     }
+
     #map-error {
       color: red;
       font-weight: bold;
@@ -70,7 +100,9 @@
   </script>
 </head>
 <body>
-  <a href="https://www.example.com">Example Link</a>
+  <div id="sticky-nav">
+    <a href="https://www.example.com">Example Link</a>
+  </div>
   <div id="clock"></div>
   <h2>Sijaintisi kartalla:</h2>
   <div id="map"></div>
